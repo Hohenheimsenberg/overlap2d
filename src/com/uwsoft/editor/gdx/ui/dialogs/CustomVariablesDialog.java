@@ -24,6 +24,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.ObjectMap.Entry;
 import com.kotcrab.vis.ui.building.OneRowTableBuilder;
 import com.kotcrab.vis.ui.building.StandardTableBuilder;
 import com.kotcrab.vis.ui.building.TableBuilder;
@@ -200,8 +201,8 @@ public class CustomVariablesDialog extends VisWindow {
 		varNames.clearItems();
 		Array<String> names = new Array<String>();
 		
-		for (Map.Entry<String, String> entry : vars.getHashMap().entrySet()) {
-			final String key = entry.getKey();
+		for (Entry<String, String> entry : vars.getHashMap().entries()) {
+			final String key = entry.key;
 			names.add(key);
 		}
 		varNames.setItems(names);

@@ -61,10 +61,6 @@ public class SceneControlMediator {
     }
 
     public void initScene(String sceneName) {
-        if (essentials.world != null) {
-            if (currentScene != null) currentScene.dispose();
-        }
-
         essentials.physicsStopped = true;
         sceneLoader = new SceneLoader(essentials);
         sceneLoader.setResolution(DataManager.getInstance().resolutionManager.curResolution);
